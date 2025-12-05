@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-rows: 80px 1fr 100px;
+
+  background-color: #050505;
+  color: #e4e4e4;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+/* ---------- BOOK SECTION STYLING ---------- */
+.book-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 10px;
+  background-color: #0b0b0b;
+  border: 2px solid transparent;
+  height: 350px;
+  border-radius: 20px;
+
+  transition: all 0.25s ease-in-out;
+
+  overflow-wrap: break-word;
+}
+
+.book-sect:hover {
+  box-shadow: 0 0 10px 0 #333;
+  border: 2px solid #1e1e1e;
+}
+
+#book-title {
+  margin-bottom: 20px;
+
+  font-size: 32px;
+  text-align: center;
+}
+
+#book-author {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #d4d4d4;
+}
+
+.book-info {
+  font-size: 14px;
+  color: #b6b6b6;
+}
+
+#status-btn {
+  margin-top: 5px;
+  padding: 5px 7px;
+
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  background: none;
+  border: 2px solid #1c1c1c;
+  border-radius: 7px;
+
+  color: #bbbbbb;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#status-btn:hover {
+  background-color: #1b1b1b;
+  border: 2px solid #1f1f1f;
+  color: #eee;
+  cursor: pointer;
+}
+
+#del-btn {
+  margin-top: 15px;
+  padding: 5px 7px;
+
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  background: none;
+  border: 2px solid #1e1e1e;
+  border-radius: 7px;
+
+  color: #bbbbbb;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#del-btn:hover {
+  background-color: #b80000;
+  border: 2px solid #e25252;
+  color: #eee;
+  cursor: pointer;
+}
