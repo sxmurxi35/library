@@ -86,3 +86,9 @@ main.addEventListener("click", (e) => {
     displayLibrary();
   }
 });
+
+const newBtn = document.querySelector("#new-btn");
+
+newBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+})

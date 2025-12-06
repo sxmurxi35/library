@@ -22,6 +22,60 @@ main {
   margin-top: 30px;
 }
 
+/* ---------- HEADER SECTION STYLING ---------- */
+header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.page-title {
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-size: 48px;
+}
+
+nav {
+  grid-column: 5/6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.button-section{
+  grid-column: 3/4;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-btn{
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+
+  background-color: transparent;
+  border-radius: 7px;
+  border: 2px solid #2c2c2c;
+  color: #cecece;
+
+ padding: 7px 10px;
+ transition: all 0.25s;
+ cursor: pointer;
+}
+
+#new-btn:hover, #new-btn:active{
+  background-color: #2c2c2c;
+  border: 2px solid #3e3e3e;
+  box-shadow: 0 0 8px #4c4c4c;
+
+}
+
 /* ---------- BOOK SECTION STYLING ---------- */
 .book-sect {
   display: flex;
@@ -111,8 +165,7 @@ main {
   cursor: pointer;
 }
 
-
-#lib-empty{
+#lib-empty {
   grid-column: 1/-1;
   text-align: center;
 }
