@@ -18,10 +18,31 @@
       </nav>
     </header>
     <main></main>
+    <footer><p>Created by <a href="https://github.com/sxmurxi35">sxmurxi35</a></p></footer>
   </body>
-  <dialog class='new-book-dialog' open>
-    <form>
-      <h2>Add a new book</h2>
+  <dialog class="new-book-dialog">
+    <form class="dialog-form">
+      <h2 id="dialog-title">Add a new book</h2>
+
+      <section class="form-input-sect">
+        <label for="book-title-form">Title:</label>
+        <input type="text" name="title" id="book-title-form" />
+
+        <label for="book-author-form">Author:</label>
+        <input type="text" name="author" id="book-author-form" />
+
+        <label for="book-pages-form">Pages:</label>
+        <input type="number" min="0" name="pages" id="book-pages-form" />
+      </section>
+      <section class="form-checkbox-sect">
+        <label for="book-status-form">Have you read it?</label>
+        <input type="checkbox" name="status" id="book-status-form" />
+      </section>
+
+      <section class="form-button-sect">
+        <button id="cancel-btn">Cancel</button>
+        <button id="confirm-btn">Confirm</button>
+      </section>
     </form>
   </dialog>
   <script src="script.js"></script>

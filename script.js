@@ -88,7 +88,44 @@ main.addEventListener("click", (e) => {
 });
 
 const newBtn = document.querySelector("#new-btn");
+const dialog = document.querySelector("dialog");
 
-newBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-})
+newBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  dialog.showModal();
+});
+
+dialog.addEventListener("click", (e) => {
+  const formBookTitle = document.querySelector("#book-title-form");
+  const formBookAuthor = document.querySelector("#book-author-form");
+  const formBookPages = document.querySelector("#book-pages-form");
+  const formBookStatus = document.querySelector("#book-status-form");
+
+  if (e.target.id == "confirm-btn") {
+    e.preventDefault();
+
+    let bookRead;
+    if (formBookStatus.checked) {
+      bookRead = true;
+    } else bookRead = false;
+
+    const bookTitle = formBookTitle.value;
+    const bookAuthor = formBookAuthor.value;
+    const bookPages = formBookPages.value;
+
+    addBookToLibrary(bookTitle, bookAuthor, bookPages, bookRead);
+    dialog.close();
+  }
+
+  if (e.target.id == "cancel-btn") {
+    e.preventDefault();
+
+    formBookAuthor.value = "";
+    formBookPages.value = "";
+    formBookTitle.value = "";
+    formBookStatus.checked = false;
+
+    dialog.close();
+  }
+});
